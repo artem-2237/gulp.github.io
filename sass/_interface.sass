@@ -1,0 +1,49 @@
+html
+    box-sizing: border-box
+*, *::before, *::after 
+    box-sizing: inherit
+body
+    +reg
+img
+    max-width: 100%
+a
+    text-decoration: none
+    color: #000
+.container 
+    max-width: 1170px
+    margin: auto
+.button
+    background-color: $main-color
+    border: none
+    border-radius: 10px
+    font-size: 13px
+    padding: 18px 30px
+    +bold
+    transition: .2s
+.button:hover
+    background-color: lighten($main-color, 10%)
+    cursor: pointer
+.input
+    width: 240px
+    border-radius: 10px
+    padding: 26px
+    border: 1px solid #dddddd
+    transition: .2s
+.input:focus
+    outline: none
+    border: 1px solid $main-color
+.title
+    font-size: 30px
+    +bold
+    text-align: center
+.reg
+    +reg
+.bold
+    +bold
+.subtitle
+    font-size: 16px
+    display: block
+input.invalid
+    border: 1px solid #ff0000
+    &:focus
+        border: 1px solid #ffb5b5
